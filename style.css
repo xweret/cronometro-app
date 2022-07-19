@@ -1,0 +1,52 @@
+main {
+    font-family: 'roboto', sans-serif;
+    position: relative;
+    font-size: 2.8rem;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 17rem;
+    height: 17rem;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 15rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.circle::before{
+    content: '';
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    width: 22rem;
+    height: 22rem;
+    left: calc(50% - 11rem);
+    top: calc(50% - 11rem);
+    background-color: #1d1d1d;
+}
+
+.seconds-sphere{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: calc(50% - 1.1rem);
+    left: calc(50% - 1.1rem);
+    animation: rotation 60s linear infinite;
+    animation-play-state: paused;
+    
+}
+
+/* Animation para el segundero*/
+
+@keyframes rotation {
+    from { transform: rotate(-90deg) translateX(8.33rem); }
+    to {
+        transform: rotate(270deg)   translateX(8.33rem); 
+    }
+}
